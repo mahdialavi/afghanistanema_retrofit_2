@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sma_rasanehsoft.phonebook2.ActivitySearch">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+
+            android:layout_height="?attr/actionBarSize"
+            android:background="#be0b0b"
+            android:id="@+id/transparent"
+            app:layout_collapseMode="pin"
+
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layoutDirection="ltr"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:gravity="left"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:src="@drawable/back2"
+                            android:id="@+id/imgback"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="32dp" />
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="8dp"
+
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/include"
+            android:background="#eee"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:id="@+id/relativeLayout">
+
+            <EditText
+                android:id="@+id/txtsearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/imgsearch"
+                android:hint="جستجو کن..."
+                android:imeActionId="@+id/imgsearch"
+                android:imeActionLabel="جست‌وجو"
+                android:layout_marginLeft="10dp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/imgsearch"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:padding="11dp"
+                android:src="@drawable/search2" />
+
+        </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/searchRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relativeLayout" />
+
+            <LinearLayout
+            android:id="@+id/desConnect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center|center_vertical"
+                android:src="@drawable/notconn"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="خطا در اتصال به اینترنت"
+                android:textColor="#4e4e4e"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/connectretry"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:background="#e10808"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="تلاش مجدد"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/notfind"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="مطلبی یافت نشد!"
+                android:textColor="#4e4e4e"
+                android:textSize="19dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
